@@ -1,18 +1,11 @@
 import { Component } from '@angular/core';
 export class Contact {
-  public name: string;
-  public email: string;
-  public imageUrl: string;
   constructor(
-    id: number,
-    name: string,
-    email: string,
-    phonne: number,
-    imageUrl: string,
-    group: string){
-      this.name = name;
-      this.email= email;
-      this.imageUrl = imageUrl;
-
-  }
+    public id: string,
+    public name: string,
+    public email: string,
+    public phone: string,
+    public imageUrl: string,
+    public group?: Contact[]
+  ) {}
 }

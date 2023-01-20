@@ -1,24 +1,15 @@
-<div class="row">
-    <div class="col-xs-12">
-        <button class="btn btn-success">New Contact</button>
+<div class="container-fluid">
+    <div class="row contact-list-header">
+        <div class="col-xs-8 vcenter">
+            <h2>Contacts</h2>
+        </div>
+        <div class="col-xs-4 vcenter">
+            <button class="btn btn-success">New Contact</button>
+        </div>
     </div>
-</div>
-<hr>
-<br>
-<div class="row">
-    <div class="col-xs-12">
-        <a href="#" class="list-group-item clearfix" *ngFor="let contact of contacts">
-            <div class="pull-left">
-                <h4 class="list-group-item-heading"><strong>Name: </strong> <span>{{contact.name}} </span></h4>
-                <p class="list-group-item-text"><strong>Email: </strong> <span>{{contact.email}}</span></p>
-            </div>
-            <span class="pull-right">
-              <img
-                src="{{contact.imageUrl}}"
-                alt="{{contact.name}}"
-                class="img-responsive"
-                style="max-height: 50px;">
-            </span>
-        </a>
+    <div class="row contact-list-container">
+        <div class="col-xs-12">
+            <app-contact-item *ngFor="let contact of contacts" [contact]="contact" (click)="onSelected(contact)"></app-contact-item>
+        </div>
     </div>
 </div>
