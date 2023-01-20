@@ -3,7 +3,7 @@
         <button class="btn btn-success">New Contact</button>
     </div>
 </div>
-<br>
+<hr>
 <br>
 <div class="row">
     <div class="col-xs-12">
@@ -13,15 +13,9 @@
                 <p class="list-group-item-text"><strong>Email: </strong> <span>{{contact.email}}</span></p>
             </div>
             <span class="pull-right">
-              <div class="col-xs-12">
-                <button class="btn btn-primary">Edit</button>
-                <button class="btn btn-danger">Delete</button>
-             </div>
-            </span>
-            <span class="pull-right">
               <img
                 src="{{contact.imageUrl}}"
-                alt=""
+                alt="{{contact.name}}"
                 class="img-responsive"
                 style="max-height: 50px;">
             </span>
