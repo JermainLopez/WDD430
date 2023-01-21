@@ -7,8 +7,6 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
 import { HeaderComponent } from './contacts/header/header.component';
 import { ContactItemComponent } from './contacts/contact-list/contact-item/contact-item.component';
-import { ContactingListComponent } from './contacts/contacting-list/contacting-list.component';
-import { ContactEditComponent } from './contacts/contacting-list/contact-edit/contact-edit.component';
 import { ShareComponent } from './share/share.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentListComponent } from './documents/document-list/document-list.component';
@@ -28,8 +26,6 @@ import { MessageEditComponent } from './message/message-edit/message-edit.compon
     ContactDetailComponent,
     HeaderComponent,
     ContactItemComponent,
-    ContactingListComponent,
-    ContactEditComponent,
     ShareComponent,
     DocumentsComponent,
     DocumentListComponent,
