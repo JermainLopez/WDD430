@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
@@ -17,6 +18,8 @@ import { MessageComponent } from './message/message.component';
 import { MessageListComponent } from './message/message-list/message-list.component';
 import { MessageItemComponent } from './message/message-item/message-item.component';
 import { MessageEditComponent } from './message/message-edit/message-edit.component';
+import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
+import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +38,11 @@ import { MessageEditComponent } from './message/message-edit/message-edit.compon
     MessageListComponent,
     MessageItemComponent,
     MessageEditComponent,
+    DocumentEditComponent,
+    ContactEditComponent,
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot([
-      {path: 'documents', component: DocumentsComponent},
-      {path: 'messages', component: MessageComponent},
-      {path: 'contacts', component: ContactsComponent},
-    ])
+    BrowserModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

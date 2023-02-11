@@ -3,7 +3,7 @@
     height: 11rem;
     margin: 2px;
     font-size: 1.3rem;
-    border: solid thin darkgrey;
+    border: solid thin rgb(40, 94, 212);
     float: left;
     padding: 0.25rem;
 }
