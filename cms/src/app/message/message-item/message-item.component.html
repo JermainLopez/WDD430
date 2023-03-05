@@ -1,10 +1,6 @@
-<a class="list-group-item clearfix">
+<a [routerLink]="[message.id]" routerLinkActive="active" class="list-group-item clearfix">
     <div class="">
-        <div class="col-xl-12">
-            <span class="messageHeader">{{ messageSender }}</span>
-            <div class="messageSubHeader"><strong>{{ message.subject }}</strong></div>
-        </div>
-
+        <span class="messageHeader">{{ messageSender }}</span>
         <div class="messageText">{{ message.msgText }}</div>
     </div>
 </a>

@@ -7,6 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Message } from '../message.model';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-message-edit',
@@ -19,7 +20,7 @@ export class MessageEditComponent implements OnInit {
   @ViewChild('msgText') msgText!: ElementRef;
   currentSender: string = 'Seth';
 
-  constructor() {}
+  constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {}
 

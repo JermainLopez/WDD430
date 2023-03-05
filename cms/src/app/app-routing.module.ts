@@ -7,7 +7,7 @@ import { DocumentDetailComponent } from './documents/document-detail/document-de
 import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { MessageListComponent } from './message/message-list/message-list.component';
-
+import {MessageComponent} from './message/message.component';
 const appRoutes: Routes = [
   { path: '', redirectTo: '/documents', pathMatch: 'full' },
   {
@@ -19,7 +19,7 @@ const appRoutes: Routes = [
       { path: ':id/edit', component: DocumentEditComponent },
     ],
   },
-  { path: 'messages', component: MessageListComponent },
+  { path: 'messages', component: MessageComponent},
   {
     path: 'contacts',
     component: ContactsComponent,
