@@ -17,13 +17,3 @@
     margin-left: 1rem;
     font-size: 1.5rem;
 }
-
-.mesageContainer {
-    width: 9rem;
-    height: 11rem;
-    margin: 2px;
-    font-size: 1.3rem;
-    border: solid thin rgb(40, 94, 212);
-    float: left;
-    padding: 0.25rem;
-}
