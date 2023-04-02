@@ -45,7 +45,7 @@ export class ContactEditComponent implements OnInit {
     let newContact = new Contact(
       this.id,
       value.name,
-      value.email,
+      value.description,
       value.phone,
       value.imageUrl,
       this.groupContacts

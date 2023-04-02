@@ -1,0 +1,16 @@
+<a [routerLink]="[ceremony.id]" routerLinkActive="active" class="list-group-item clearfix">
+
+    <div class="border border-success" id="primary">
+        <span class="pull-right">
+        <img
+          [src]="ceremony.imageUrl"
+          [alt]="ceremony.name"
+          class="img-responsive"
+        />
+      </span>
+        <div class="pull-left">
+            <h4 class="list-group-item-heading">{{ ceremony.name }}</h4>
+        </div>
+
+    </div>
+</a>

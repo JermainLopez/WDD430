@@ -1,5 +1,5 @@
 export class contactsShare {
-  constructor(public name: string, public email: string){
+  constructor(public name: string, public description: string){
 
   }
 }

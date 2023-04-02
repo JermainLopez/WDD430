@@ -1,0 +1,39 @@
+mongo db password
+0ZZnfXpjuGNFaQsT
+
+mongodb+srv://fabiolaturcios82:0ZZnfXpjuGNFaQsT@cluster0.uv5mvxd.mongodb.net/test
+
+
+
+npm install -g @angular/cli@latest
+
+ng new proyect --no-strict
+
+
+%AppData%\npm
+
+npm install --save bootstrap@3
+
+Crear componente
+ng generate component name-of-Component
+ng gc name-of-Component
+
+CREATE APIPE TRANSFORMATION
+
+ng g p ceremonies-filter --flat
+
+
+
+STRUCTURE
+
+ceremony
+ng generate component ceremony-detail
+ng generate component ceremony-edit
+ng generate component ceremony-item
+ng generate component ceremony-list
+
+memories
+ng generate component memories-detail
+ng generate component memories-edit
+ng generate component memories-item
+ng generate component memories-list

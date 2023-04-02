@@ -1,0 +1,36 @@
+<div class="card" style="width: 20rem;">
+    <img class="card-img-top" [src]="ceremony.imageUrl" [alt]="ceremony.name" height="250px">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>{{ ceremony.name }}</h3>
+            </div>
+        </div>
+
+        <div class="row" *ngIf="ceremony.description && ceremony.description !== ' '">
+            <div class="col-xs-12">
+                <p><strong>Description:</strong> {{ ceremony.description }}</p>
+            </div>
+        </div>
+        <div class="row" *ngIf="ceremony.phone && ceremony.phone !== ' '">
+            <div class="col-xs-12">
+                <p><strong>Phone:</strong> {{ ceremony.phone }}</p>
+            </div>
+        </div>
+
+        <div class="col-xs-6 vcenter">
+            <a class="btn btn-primary btn-sm" routerLink="edit">Edit</a>
+            <a class="btn btn-danger btn-sm" (click)="onDelete()">Delete</a>
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="ceremony.group">
+    <div class="col-xs-12">
+        <strong>Group ceremonys:</strong>
+        <div class="row" style="min-height: 3rem">
+            <div *ngFor="let groupceremony of ceremony.group">
+                <app-ceremony-item class="col-sm-11" [ceremony]="groupceremony"></app-ceremony-item>
+            </div>
+        </div>
+    </div>
+</div>

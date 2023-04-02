@@ -1,0 +1,21 @@
+nav li {
+    color: rgb(12, 104, 104);
+    text-decoration: none;
+    padding: 3%;
+    background: rgb(185, 233, 233);
+    margin: 3%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li:hover,
+.navbar-brand:hover {
+    background: rgb(5, 59, 43);
+    color: white;
+}
+
+nav a:hover {
+    color: white;
+}
