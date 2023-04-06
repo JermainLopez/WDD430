@@ -1,0 +1,10 @@
+<a [routerLink]="['/memories', memory.id]" routerLinkActive="active" class="list-group-item clearfix">
+    <div class="border border-success" id="primary">
+        <span class="pull-right">
+          <video [src]="memory.imageUrl"  poster="presentacion.jpg" controls></video>
+      </span>
+        <div class="pull-left">
+            <h4 class="list-group-item-heading">{{ memory.name }}</h4>
+        </div>
+    </div>
+</a>

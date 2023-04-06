@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row memory-list-header container-fluid">
+        <div class="row">
+            <div class="col-xs-8 vcenter">
+                <h2>Memories</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-4">
+                <a class="btn btn-success" [routerLink]="['new']">New memory</a>
+            </div>
+        </div>
+    </div>
+    <div class="row memory-list-container">
+        <div class="col-xs-12">
+            <app-memories-item *ngFor="let memory of memories" [memory]="memory" dnd-draggable [dragEnabled]="true" [dragData]="memory" [dropZones]="['memoryGroup']"></app-memories-item>
+        </div>
+    </div>
+</div>

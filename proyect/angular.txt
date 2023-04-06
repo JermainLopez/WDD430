@@ -1,0 +1,38 @@
+npm install -g @angular/cli@latest
+
+ng new proyect --no-strict
+
+
+%AppData%\npm
+
+npm i -g typescript
+
+npm install --save bootstrap@3
+
+Crear componente
+ng generate component name-of-Component
+ng gc name-of-Component
+
+CREATE APIPE TRANSFORMATION
+
+ng g p contacts-filter --flat
+
+
+STRUCTURE PROJECT
+
+ng generate component ceremonies
+ng generate component ceremonies-detail
+ng generate component ceremonies-edit
+ng generate component ceremonies-item
+ng generate component ceremonies-list
+
+ng generate component memories
+ng generate component memories-detail
+ng generate component memories-edit
+ng generate component memories-item
+ng generate component memories-list
+
+ng generate component people
+ng generate component people-edit
+ng generate component people-item
+ng generate component people-list

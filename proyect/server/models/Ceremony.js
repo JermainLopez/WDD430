@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 
-const CeremonySchema = new mongoose.Schema({
+const ceremonySchema = new mongoose.Schema({
     id: { type: String, required: true },
     name: { type: String, required: true },
     description: { type: String },
     phone: { type: String },
     imageUrl: { type: String },
-    group: [{ type: mongoose.Schema.Types.ObjectId, ref: "Contact" }],
+    group: [{ type: mongoose.Schema.Types.ObjectId, ref: "Ceremony" }] || null,
 })
 
-module.exports = mongoose.model('Ceremony', CeremonySchema)
+module.exports = mongoose.model('Ceremony', ceremonySchema)

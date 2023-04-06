@@ -1,0 +1,79 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form id="ceremony-edit" #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" [ngModel]="ceremony?.name" class="form-control required" size="120" max="120" required #name="ngModel" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="description">description:</label>
+                    <input type="text" id="description" name="description" [ngModel]="ceremony?.description" class="form-control required" size="120" max="255" required #description="ngModel" />
+                </div>
+            </div>
+            <div class="alert alert-danger" *ngIf="!description.valid && description.touched">
+                Please enter a valid description address.
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" [ngModel]="ceremony?.phone" class="form-control invalid" size="150" max="255" #phone="ngModel" pattern="\D*([2-9]\d{2})(\D*)([2-9]\d{2})(\D*)(\d{4})\D*" />
+                </div>
+            </div>
+            <div class="alert alert-danger" *ngIf="!phone.valid && phone.touched">
+                Please enter a valid phone number.
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="imageUrl">Image URL:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" [ngModel]="ceremony?.imageUrl" class="form-control" size="150" max="255" #imageUrl="ngModel" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="groupList">Group Ceremonies:</label>
+                    <div class="row" id="groupList" style="min-height: 3rem" dnd-droppable [dropZones]="['ceremonyGroup']" (onDropSuccess)="addToGroup($event)">
+                        <div *ngFor="let ceremony of groupCeremonies; let i = index">
+                            <div>
+                                <app-ceremonies-item class="col-sm-11" [ceremony]="ceremony"></app-ceremonies-item>
+                                <button class="btn btn-danger col-sm-2 deleteButton" (click)="onRemoveItem(i)">
+                X
+              </button>
+                            </div>
+                        </div>
+                        <span class="dragMsg" *ngIf="groupCeremonies?.length < 1">Drag ceremonies in group here</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="alert alert-danger"
+      *ngIf="(!name.valid && name.touched) || (!description.valid && description.touched)"
+    >
+      The Name and description fields are required.
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 btn-toolbar">
+        <button
+          class="btn btn-success"
+          type="submit"
+          [disabled]="!editMode && !f.valid"
+        >
+          Save
+        </button>
+        <button class="btn btn-primary" type="button" (click)="onCancel()">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>

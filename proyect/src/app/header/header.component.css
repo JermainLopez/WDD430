@@ -10,12 +10,14 @@ nav a {
     text-decoration: none;
 }
 
-nav li:hover,
-.navbar-brand:hover {
-    background: rgb(5, 59, 43);
+nav {
+    background-image: linear-gradient( to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("https://images.unsplash.com/photo-1574547887997-904252c06ca3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
     color: white;
 }
 
 nav a:hover {
+    width: 100%;
+    height: 100%;
+    background: rgb(5, 59, 43);
     color: white;
 }

@@ -1,42 +1,40 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CeremonyComponent } from './ceremony/ceremony.component';
-import { CeremonyDetailComponent } from './ceremony/ceremony-detail/ceremony-detail.component';
-import { CeremonyEditComponent } from './ceremony/ceremony-edit/ceremony-edit.component';
-import { CeremonyItemComponent } from './ceremony/ceremony-item/ceremony-item.component';
-import { CeremonyListComponent } from './ceremony/ceremony-list/ceremony-list.component';
+
+import { MemoriesComponent } from './memories/memories.component';
+import { MemoriesDetailComponent } from './memories/memories-detail/memories-detail.component';
+import { MemoriesEditComponent } from './memories/memories-edit/memories-edit.component';
+
+import { CeremoniesComponent } from './ceremonies/ceremonies.component';
+import { CeremoniesDetailComponent } from './ceremonies/ceremonies-detail/ceremonies-detail.component';
+import { CeremoniesEditComponent } from './ceremonies/ceremonies-edit/ceremonies-edit.component';
+
+import { PeopleListComponent } from './people/people-list/people-list.component';
 
 
-/* import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
-import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { DocumentDetailComponent } from './documents/document-detail/document-detail.component';
-import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
-import { DocumentsComponent } from './documents/documents.component';
-import { MessageListComponent } from './message/message-list/message-list.component';
-import {MessageComponent} from './message/message.component'; */
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/ceremonies', pathMatch: 'full' },
+  { path: '', redirectTo: '/ceremony', pathMatch: 'full' },
   {
     path: 'ceremonies',
-    component: CeremonyComponent,
+    component: CeremoniesComponent,
     children: [
-      { path: 'new', component: CeremonyEditComponent },
-      { path: ':id', component: CeremonyDetailComponent },
-      { path: ':id/edit', component: CeremonyEditComponent },
+      { path: 'new', component: CeremoniesEditComponent },
+      { path: ':id', component: CeremoniesDetailComponent },
+      { path: ':id/edit', component: CeremoniesEditComponent },
     ],
   },
-  /* { path: 'messages', component: MessageComponent},
+  { path: '', redirectTo: '/momories', pathMatch: 'full' },
   {
-    path: 'contacts',
-    component: ContactsComponent,
+    path: 'memories',
+    component: MemoriesComponent,
     children: [
-      { path: 'new', component: ContactEditComponent },
-      { path: ':id', component: ContactDetailComponent },
-      { path: ':id/edit', component: ContactEditComponent },
+      { path: 'new', component: MemoriesEditComponent },
+      { path: ':id', component: MemoriesDetailComponent },
+      { path: ':id/edit', component: MemoriesEditComponent },
     ],
-  }, */
+  },
+  { path: 'messages', component: PeopleListComponent },
 ];
 
 @NgModule({

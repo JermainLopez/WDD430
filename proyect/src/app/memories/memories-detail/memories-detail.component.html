@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>{{ memory.name }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <video [src]="memory.imageUrl" poster="presentacion.jpg" controls></video>
+            <div class="col-xs-6 vcenter">
+                <a class="btn btn-primary btn-sm" routerLink="edit">Edit</a>
+                <a class="btn btn-danger btn-sm" (click)="onDelete()">Delete</a>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="row" *ngIf="memory.description && memory.description !== ' '">
+            <div class="col-xs-12">
+                <p><strong>description:</strong> {{ memory.description }}</p>
+            </div>
+        </div>
+        <div class="row" *ngIf="memory.phone && memory.phone !== ' '">
+            <div class="col-xs-12">
+                <p><strong>Phone:</strong> {{ memory.phone }}</p>
+            </div>
+        </div>
+        <div class="row" *ngIf="memory.group">
+            <div class="col-xs-12">
+                <strong>Group memorys:</strong>
+                <div class="row" style="min-height: 3rem">
+                    <div *ngFor="let groupmemory of memory.group">
+                        <app-memory-item class="col-sm-11" [memory]="groupmemory"></app-memory-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

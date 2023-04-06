@@ -59,7 +59,7 @@ import { SortableHandleComponent } from 'ng2-dnd';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    /* DndModule.forRoot(), */
+    DndModule.forRoot(),
 
   ],
 

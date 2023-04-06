@@ -37,3 +37,14 @@ ng generate component memories-detail
 ng generate component memories-edit
 ng generate component memories-item
 ng generate component memories-list
+
+
+
+npm i @angular/forms
+
+
+npm i ng-modules
+npm install ng2-dnd
+
+npm install ng2-dnd --save
+npm i mongodb

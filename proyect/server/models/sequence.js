@@ -1,9 +1,10 @@
+const string = require("@hapi/joi/lib/types/string");
 const mongoose = require("mongoose");
 
 const sequenceSchema = mongoose.Schema({
-    maxDocumentId: { type: Number, required: true },
-    maxMessageId: { type: Number, required: true },
-    maxContactId: { type: Number, required: true },
+    maxCeremonyId: { type: Number, required: true },
+    maxMemoryId: { type: Number, required: true },
+    maxPlaceId: { type: Number, required: true },
 });
 
 module.exports = mongoose.model("Sequence", sequenceSchema);

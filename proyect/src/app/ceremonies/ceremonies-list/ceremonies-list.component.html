@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row ceremony-list-header container-fluid">
+        <div class="row">
+            <div class="col-xs-8 vcenter">
+                <h2>Ceremonys</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="input-group">
+                    <input class="form-control" type="text" (keyup)="search(searchBox.value)" placeholder="Enter a search value" #searchBox />
+                    <div class="input-group-addon input-search-btn">
+                        <div class="glyphicon glyphicon-search input-group-text" (click)="search(searchBox.value)">Search</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-xs-4">
+                <a class="btn btn-success" [routerLink]="['new']">New ceremony</a>
+            </div>
+        </div>
+    </div>
+    <div class="row ceremony-list-container">
+        <div class="col-xs-12">
+            <app-ceremonies-item *ngFor="let ceremony of ceremonies " [ceremony]="ceremony" dnd-draggable [dragEnabled]="true" [dragData]="ceremony" [dropZones]="['ceremonyGroup']"></app-ceremonies-item>
+        </div>
+    </div>
+</div>
